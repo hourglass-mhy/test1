@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="600"></canvas>
+</body>
+</html>
+<script src="chain0.6.js"></script>
+<script>
+    var canvas = document.getElementById("myCanvas");//获取canvas对象
+    var ctx = canvas.getContext("2d");//创建context对象
+
+    var bigX=300;
+    var bigY=300;
+    var bigRadius=200;
+    var startRadian=Math.PI/3;
+
+    var opts={
+        bigX:bigX,
+        bigY:bigY,
+        bigRadius:bigRadius,
+        smallRadius: 50,
+        startRadian:startRadian,
+        data: "前端,java,php,c++,android,ios,电子商务,UI,Python".split(",")
+    }
+    //创建实例
+    var myChain=new DrawChain(opts);
+
+
+</script>
